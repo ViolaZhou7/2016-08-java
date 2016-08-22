@@ -84,53 +84,53 @@ public class Calculator extends JFrame implements ActionListener{
 		keys[18].setForeground(Color.red);  // "+"
 		keys[19].setForeground(Color.red);  // "="
         
-        // put all commands into one panel
-        JPanel commandsPanel = new JPanel();
-        // 1 row & 3 columns ...
-        commandsPanel.setLayout(new GridLayout(1,3,3,3));
-        for(int i = 0; i < COMMANDS.length;i++){
-        	commands[i] = new JButton(COMMANDS[i]);
-        	commandsPanel.add(commands[i]);
-        	commands[i].setForeground(Color.red);
+        	// put all commands into one panel
+        	JPanel commandsPanel = new JPanel();
+        	// 1 row & 3 columns ...
+        	commandsPanel.setLayout(new GridLayout(1,3,3,3));
+        	for(int i = 0; i < COMMANDS.length;i++){
+        		commands[i] = new JButton(COMMANDS[i]);
+        		commandsPanel.add(commands[i]);
+        		commands[i].setForeground(Color.red);
 		}
         
-        // put all M's into one panel
-        JPanel calmsPanel = new JPanel();
-        // 5 rows & 1 column ...
-        calmsPanel.setLayout(new GridLayout(5,1,3,3));
-        for (int i = 0; i < M.length; i++) {  
-            m[i] = new JButton(M[i]);  
-            calmsPanel.add(m[i]);  
-            m[i].setForeground(Color.red);  
-        } 
+        	// put all M's into one panel
+        	JPanel calmsPanel = new JPanel();
+        	// 5 rows & 1 column ...
+        	calmsPanel.setLayout(new GridLayout(5,1,3,3));
+        	for (int i = 0; i < M.length; i++) {  
+            		m[i] = new JButton(M[i]);  
+            		calmsPanel.add(m[i]);  
+            		m[i].setForeground(Color.red);  
+        	} 
         
-        // create a large panel, put commands' and keys' panels on it
-        JPanel panel1 = new JPanel();
-        panel1.setLayout(new BorderLayout(3,3));
-        panel1.add("North", commandsPanel);  
-        panel1.add("West", calckeysPanel);
+        	// create a large panel, put commands' and keys' panels on it
+        	JPanel panel1 = new JPanel();
+        	panel1.setLayout(new BorderLayout(3,3));
+        	panel1.add("North", commandsPanel);  
+        	panel1.add("West", calckeysPanel);
         
-        // create a panel, put text field
-        JPanel top = new JPanel();  
-        top.setLayout(new BorderLayout());  
-        top.add("Center", resultText);
+        	// create a panel, put text field
+        	JPanel top = new JPanel();  
+        	top.setLayout(new BorderLayout());  
+        	top.add("Center", resultText);
         
-        // overall layout
-        getContentPane().setLayout(new BorderLayout(3,5));
-        getContentPane().add("North", top);  
-        getContentPane().add("Center", panel1);  
-        getContentPane().add("West", calmsPanel); 
+        	// overall layout
+        	getContentPane().setLayout(new BorderLayout(3,5));
+        	getContentPane().add("North", top);  
+        	getContentPane().add("Center", panel1);  
+        	getContentPane().add("West", calmsPanel); 
         
-        // use the same action listener
-        for (int i = 0; i < KEYS.length; i++) {  
-            keys[i].addActionListener(this);  
-        }  
-        for (int i = 0; i < COMMANDS.length; i++) {  
-            commands[i].addActionListener(this);  
-        }  
-        for (int i = 0; i < M.length; i++) {  
-            m[i].addActionListener(this);  
-        } 
+        	// use the same action listener
+        	for (int i = 0; i < KEYS.length; i++) {  
+            		keys[i].addActionListener(this);  
+        	}  
+        	for (int i = 0; i < COMMANDS.length; i++) {  
+            		commands[i].addActionListener(this);  
+        	}  
+        	for (int i = 0; i < M.length; i++) {  
+            		m[i].addActionListener(this);  
+        	} 
 	}
 
 	/*
@@ -272,8 +272,8 @@ public class Calculator extends JFrame implements ActionListener{
 
 	public static void main(String[] args) {
 		Calculator calculator1 = new Calculator();  
-        calculator1.setVisible(true);  
-        calculator1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+        	calculator1.setVisible(true);  
+        	calculator1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 	}
 
 }
