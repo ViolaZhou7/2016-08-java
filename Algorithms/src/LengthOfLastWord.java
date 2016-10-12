@@ -6,7 +6,7 @@ public class LengthOfLastWord {
 	//If the last word does not exist, return 0.
 	public static void main(String[] args) {
 		String s="x";
-		
+		s = s.trim();
 		if (s==null || s.length()==0)
 			System.out.println("0");
 		
